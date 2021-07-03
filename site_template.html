@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>list</title>
+
+<head>
+    <style>
+      #container{
+          display: grid;
+          grid-gap: 20px;
+          margin-top: 10px;
+          margin-left: 150px;
+         
+          grid-template-columns: 300px 600px;
+          grid-template-rows: 50px 500px;
+          grid-template-areas: "a a"
+                                "b c";
+      }
+      #class1{
+          grid-area: a;
+          background-color: red;
+          border-radius: 5px;
+      }
+     #class2{
+         grid-area: b;
+         background-color: green;
+           border-radius: 5px;
+     }
+     #class3{
+         grid-area: c;
+         background-color: teal;
+           border-radius: 5px;
+     }
+    </style>
+</head>
+
+<body id="container">
+    <div id="class1"></div>
+    <div id="class2"></div>
+    <div id="class3"></div>
+   
+</body>
+
+</html>
