@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>grid</title>
+<head>
+    <style>
+      #container{
+          display: grid;
+          margin-left: 30%;
+          grid-gap: 15px;
+          margin-top: 50px;
+           grid-template-columns: 100px 100px 100px 100px;
+          grid-template-rows: 100px 100px 100px;
+          grid-template-areas: "a b b d"
+                                "e e g h"
+                                "i j k k";
+      }
+     
+      #div1{
+        grid-area: a;
+       
+      }
+      #div2{
+          grid-area: b;
+      }
+      #div3{
+          grid-area: c;
+      }
+     #div4{
+         grid-area: d;
+         
+     }
+      #div5{
+         grid-area: e;
+         
+     }
+      #div6{
+         grid-area: f;
+         
+     }
+      #div7{
+         grid-area: g;
+        
+     }
+      #div8{
+         grid-area: h;
+          
+     }
+      #div9{
+         grid-area: i;
+        
+     }
+      #div10{
+         grid-area: j;
+         
+     }
+      #div11{
+         grid-area: k;
+          
+     }
+      #div12{
+         grid-area: l;
+          
+     }
+     .class1{
+         border-radius: 3px;
+          background-color: teal;
+     }
+    </style>
+</head>
+
+<head></head>
+
+<body id="container">
+    <div id="div1" class="class1"></div>
+    <div id="div2" class="class1"></div>
+    <div id="div3" class="class1"></div>
+    <div id="div4" class="class1"></div>
+    <div id="div5" class="class1"></div>
+    <div id="div6" class="class1"></div>
+    <div id="div7" class="class1"></div>
+    <div id="div8" class="class1"></div>
+    <div id="div9" class="class1"></div>
+    <div id="div10" class="class1"></div>
+    <div id="div11" class="class1"></div>
+    <div id="div12" class="class1"></div>
+</body>
+
+</html>
