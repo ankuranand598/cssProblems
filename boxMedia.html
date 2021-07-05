@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Media</title>
+
+<head>
+    <style>
+        #container{
+            display: grid;
+            grid-gap: 30px;
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 80px 200px 200px;
+            grid-template-areas: "a a"
+                                  "b c"
+                                  "b c";
+
+        }
+        #yello{
+            background-color: yellow;
+            grid-area: a;
+        }
+        #red1{
+            background-color: red;
+            grid-area: b;
+        }
+        #green1{
+            background-color: rgb(23, 209, 23);
+            grid-area: c;
+        }
+        p{
+            color: grey;
+            font-size: x-large;
+            margin-left: 20px;
+        }
+        @media (max-width: 500px){
+          #container{
+            display: grid;
+            grid-gap: 30px;
+            width: 90%;
+            margin-left:30px;
+            margin-top: 40px;
+            grid-template-columns: 90%;
+            grid-template-rows: 60px 150px 150px;
+            grid-template-areas: "a"
+                                  "b"
+                                  "c";
+
+        }  
+        }
+    </style>
+</head>
+
+<body id="container">
+   <div id="yello"><h1>Navigation</h1></div>
+    <div id="red1"><p>LEFT BOX</p></div>
+    <div id="green1"><p>RIGHT BOX</p></div>
+   
+</body>
+
+</html>
