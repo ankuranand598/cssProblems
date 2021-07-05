@@ -1,0 +1,104 @@
+@media only screen and (min-width: 600px) {
+#container{
+height: 250px;
+width: 425px;
+margin: 30px;
+display: grid;
+grid-gap: 5px;
+grid-template:"e e"
+"a b"
+"c d" ;
+}
+#class1{
+height: 35px;
+width: 350px;
+margin-top: 5px;
+margin-left: 30px;
+grid-area: e;
+background-color: yellow;
+}
+#class2,#class3,#class4,#class5{
+height: 150px;
+width: 150px;
+
+}
+#class2{
+background-color: red;
+margin-left: 30px;
+grid-area:a;
+}
+#class3{
+background-color: skyblue;
+grid-area:b;
+}
+#class4{
+background-color: green;
+margin-left: 30px;
+grid-area:c;
+}
+#class5{
+background-color: gray;
+grid-area:d;
+}
+.name{
+font-weight:300;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:large;
+margin:1px
+}
+}
+
+
+
+@media only screen and (min-width: 300px) {
+
+
+#container{
+
+height: 300px;
+width: 1200px;
+
+display: grid;
+grid-gap: 5px;
+grid-template:"e e e e"
+"a b c d" ;
+
+
+}
+#class1{
+height: 50px;
+width: 1048px;
+margin-top: 10px;
+margin-left: 80px;
+grid-area: e;
+background-color: yellow;
+}
+#class2,#class3,#class4,#class5{
+height: 200px;
+width: 200px;
+
+}
+#class2{
+background-color: red;
+margin-left: 80px;
+grid-area:a;
+}
+#class3{
+background-color: skyblue;
+grid-area:b;
+}
+#class4{
+background-color: green;
+grid-area:c;
+}
+#class5{
+background-color: gray;
+grid-area:d;
+}
+.name{
+font-weight:700;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:xx-large;
+margin:1px
+}
+}
