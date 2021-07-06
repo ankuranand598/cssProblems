@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>dom</title>
+
+<head></head>
+
+<body>
+    <h1>Digital Prison</h1>
+    <button onclick="showAlert('hello Riot')">hello Riot</button>
+    <button onclick="showAlert('cctv camera broken')">cctv camera broken</button>
+    <button onclick="showAlert('Culprit running')">Culprit running</button>
+    <button onclick="showAlert('opening door')">opening door</button>
+</br>
+</br>
+<input type="text" id="custom_msg" placeholder="Enter Status"/>
+<button onclick="submitStatus()">Submit</button>
+<div id="messege"></div>
+</body>
+
+</html>
+<script>
+function showAlert(msg){
+    alert(msg);
+}
+function submitStatus(){
+    var msg = document.getElementById("custom_msg").value;
+    var div= document.getElementById("messege");
+    var h1= document.createElement('h1')
+    h1.textContent = msg;
+    div.appendChild(h1)
+}
+</script>

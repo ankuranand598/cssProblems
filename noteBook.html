@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>list</title>
+
+<head></head>
+
+<body>
+   <select id="day">
+       <option value="Day1">Day 1</option>
+        <option value="Day2">Day 2</option>
+        <option value="Day3">Day 3</option>
+        <option value="Day4">Day 4</option>
+   </select>
+   <input onkeypress="addNote(event)" id="note" type="text"/>
+</body>
+
+</html>
+<script>
+var notes={
+    day1:[],
+    day2:[],
+    day3:[],
+    day4:[],
+};
+
+
+
+function addNote(e){
+    if(e.key === 'Enter'){
+    var note = document.getElementById("note").value;
+    var days = document.getElementById("day").value;
+    if(days == "Day1"){
+    notes.day1.push(note);
+    
+    }else if (days == "Day2") {
+        notes.day2.push(note);
+
+    } else if (days == "Day3") {
+        notes.day3.push(note);
+
+    } else if (days == "Day4") {
+        notes.day4.push(note);
+
+    }
+
+
+    console.log("notes:",notes)
+}
+}
+</script>
