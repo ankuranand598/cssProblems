@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>Marriage</title>
+
+<head></head>
+
+<body>
+    <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <input onkeypress="checkAge(event)" type="number" id="age"/>
+</body>
+
+</html>
+<script>
+function checkAge(eve){
+    if(eve.key==='Enter'){
+       var gender = document.getElementById("gender").value;
+       var age=document.getElementById("age").value;
+       if(gender == 'female' && age >=18){
+           alert('the user is of the valid legal age to get married');
+
+       }else if(gender == 'male' && age >= 21){
+           alert('the user is of the valid legal age to get married');
+       }else{
+           alert('the user is not of the valid legal age to get married');
+       }
+    }
+}
+</script>
