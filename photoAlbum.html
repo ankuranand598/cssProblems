@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>list</title>
+
+<head>
+    <style>
+        #albums{
+            display: grid;
+            padding: 5%;
+            grid-template-columns: repeat(4,20%);
+            gap: 5%;
+        }
+        img{
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+  <h1>photo Album</h1>
+  <input type="text" id="url"/>
+  <button onclick="addImage()">addImage</button>
+  <div id="albums"></div>
+</body>
+
+</html>
+
+<script>
+    var albumDiv = document.getElementById("albums");
+function addImage(){
+  var url=document.getElementById("url").value;
+  var img =document.createElement("img");//its tag not my img.  
+img.setAttribute("src", url);
+albumDiv.append(img);
+}
+</script>

@@ -14,26 +14,33 @@
     <input type="number"/>
     <p>Max</p>
 </br>
-    <input for="butt" type="number" placeholder="#"/>
+    <input onclick="showNumber()" for="butt" type="number" placeholder="#"/>
     </br>
-    <button onkeypress="addNumber1(1)" id="butt">1</button>
-    <button onkeypress="addNumber()">2</button>
-    <button onkeypress="addNumber()">3</button>
+    <button onclick="addNumber1(1)" id="butt">1</button>
+    <button onclick="addNumber1(2)">2</button>
+    <button onclick="addNumber1(3)">3</button>
     </br>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
+    <button onclick="addNumber1(4)">4</button>
+    <button onclick="addNumber1(5)">5</button>
+    <button onclick="addNumber1(6)">6</button>
     </br>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
+    <button onclick="addNumber1(7)">7</button>
+    <button onclick="addNumber1(8)">8</button>
+    <button onclick="addNumber1(9)">9</button>
     </br>
-    <button>0</button>
+    <button onclick="addNumber1(0)">0</button>
 </body>
 
 </html>
 <script>
-function addNumber1(){
-   alert("go");
+function addNumber1(num){
+    var arr=[];
+  var op =  document.getElementById("butt").value;
+  arr.push(num)
+    
+}
+    console.log(arr);
+function showNumber(){
+    console.log('1');
 }
 </script>
