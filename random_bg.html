@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body id="background">
+   
+</body>
+
+</html>
+<script>
+
+    function random(number) {
+        return Math.floor(Math.random() * number);
+    }
+    function randomColor() {
+        return 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+    }
+    function randombgColor() {
+        var colorVal = randomColor();
+        document.getElementById("background").style.backgroundColor = colorVal;
+    }
+    window.addEventListener('resize', randombgColor);
+
+</script>
