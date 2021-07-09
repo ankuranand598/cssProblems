@@ -19,12 +19,11 @@ document.getElementById("heading").style.color=colorVal;
 
 var count=0;
 for(var i=0;i<3;i++){
-count++;
-     butt.addEventListener('click', headerColor);
+
+     butt[i].addEventListener('click', headerColor);
+     count++;
 }
-    if (count == 3) {
-        butt.removeEventListener('click', headerColor);
-    }
+   
     
     </script>
 </body>
