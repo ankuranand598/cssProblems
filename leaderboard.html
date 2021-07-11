@@ -14,7 +14,7 @@
     <input type="number"/>
     <p>Max</p>
 </br>
-    <input onclick="showNumber()" for="butt" type="number" placeholder="#"/>
+    <input  id="butt" type="number" placeholder="#"/>
     </br>
     <button onclick="addNumber1(1)" id="butt">1</button>
     <button onclick="addNumber1(2)">2</button>
@@ -36,7 +36,7 @@
 function addNumber1(num){
     var arr=[];
   var op =  document.getElementById("butt").value;
-  arr.push(num)
+  alert(op)
     
 }
     console.log(arr);
