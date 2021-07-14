@@ -4,45 +4,195 @@
 <head>
     <title>Unix</title>
     <style>
-     #div1{
-         width: 40%;
+     #divMain{
+         width: 35%;
          margin: 4px solid black;
          height: 300px;
          margin: auto;
-         background-color: rgb(82, 80, 79);
+         background-color: rgb(169, 161, 158);
      }
      #div{
          margin: auto;
      }
-     img{
+     .img{
          margin-top: 10px;
          margin-left: 33%;
+         height: 150px;
+         width: 30%;
      }
+     .para{
+         color: blue;
+         font-size: x-large;
+         font-family: sans-serif;
+         font-weight: 700;
+         text-align: center;
+     }
+     .para1{
+         font-size: larger;
+       text-align: center ;
+          font-family: sans-serif;
+     }
+     .div2{
+         height: 150px;
+         width: 70%;
+        margin-top: 40px;
+        margin-left: 15%;
+        
+
+     }
+     .img2{
+         height: 150px;
+         width: 20%;
+         
+
+     }
+     h2{
+         margin-right: 60%;
+         color: red;
+        float: right;
+        margin-top: 1px;
+     }
+     h5{
+        margin-right: 250px; 
+         float: right;
+        margin-top: 1px;
+        
+     }
+     #div3{
+         height: 150px;
+         width: 80%;
+         margin-top: 20px;
+         margin-left: 110px;
+         background-color: orangered;
+     }
+     .div3_1,.div3_2,.div3_3{
+         float: left;
+     }
+     .div3_2{
+         height: 120px;
+         width: 5px;
+         margin-top: 10px;
+         
+         background-color: black;
+     }
+     
+     .div3_1{
+        height: 150px;
+        width: 45%;
+     }
+     .paraDiv1{
+         color: white;
+         font-size: x-large;
+         margin-left: 30px;
+         font-family: sans-serif;
+     }
+     .paraDiv1_2{
+        font-size: large;
+         margin-left: 30px;
+         font-family: sans-serif; 
+     }
+     .paraDiv3{
+         
+         color: white;
+         font-size: x-large;
+         
+         margin-left: 400px;
+         font-family: sans-serif; 
+     }
+     .paraDiv1_3{
+         font-size: large;
+         margin-left: 250px;
+         margin-top: 20px;
+         font-family: sans-serif;
+     }
+     
     </style>
 </head>
 
-<body>
-    <button  id="button1" onclick="createPage()">Create Page</button>
-    <div id="printHere" ></div>
+<body id="body">
+  <button onclick="appearPage()">create</button>
 </body>
 
 </html>
 <script>
-var butt1=document.getElementById('printHere')
+    var divOpen=document.createElement("div")
+    divOpen.setAttribute("id","head")
+    //divOpen.innerText="anku"
+    var body = document.getElementById("body");
+    body.appendChild(divOpen)
+var div=document.createElement('div');
+div.setAttribute("id","divMain")
+
+//div.innerHTML="html";
+divOpen.append(div);
+var image= document.createElement('img');
+//console.log(image)
+image.setAttribute("class", "img")
+image.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg')
+div.append(image);
+var para =document.createElement("p");
+para.setAttribute("class","para");
+para.innerHTML="Linus Torvalds"
+div.append(para);
+    var para1 = document.createElement("p");
+    para1.setAttribute("class", "para1");
+    para1.innerHTML = "The creator of Linux & Git"
+    div.append(para1);
+    var div2 = document.createElement("div");
+    div2.setAttribute("class","div2");
    
-function createPage(){
-   var div = document.createElement('div');
-   div.innerHTML = `<div id="div1"></div>`; 
-    var div1 = document.getElementById('div1');
-    div1.innerHTML = `<p>Linus torvalds</p>`;
-   var img_div= new Image(100, 100);
-   img_div.src=`https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg`
-   
-   butt1.append(div);
-    div1.appendChild(img_div,div1);
-    
-    
-}
-  
-//butt1.addEventListener('click',createPage)
+    divOpen.appendChild(div2);
+    var image2 = document.createElement('img');
+        //console.log(image)
+        image2.setAttribute("class", "img2");
+        image2.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg')
+        div2.innerHTML = "<h2>Sal Khan</h2><h5>Salman Khan is the founder of The Khan Academy which has a mission </br>of providing a free world class education for anyone,anywhere</h5>"
+        div2.append(image2);
+     var div3 = document.createElement('div');
+        div3.setAttribute("id", "div3")
+        
+        //div3.innerHTML="html";
+        divOpen.appendChild(div3);
+            var div3_1 = document.createElement('div');
+                div3_1.setAttribute('class', 'div3_1')
+                //div3_1.innerHTML = 'created';
+                div3.appendChild(div3_1)
+            var div3_2 = document.createElement('div');
+                div3_2.setAttribute('class', 'div3_2')
+                //div3_2.innerHTML = 'created';
+                div3.appendChild(div3_2)  
+            var div3_3 = document.createElement('div');
+                div3_3.setAttribute('class', 'div3_3')
+                //div3_3.innerHTML = '<br/>created';
+                div3.appendChild(div3_3)
+                var paraDiv1= document.createElement('p');
+                paraDiv1.setAttribute('class','paraDiv1');
+                paraDiv1.innerHTML="Ken Thompson</br>"  
+                
+                div3_1.appendChild(paraDiv1)   
+                 var paraDiv1_2 = document.createElement('p');
+                    paraDiv1_2.setAttribute('class', 'paraDiv1_2');
+                    paraDiv1_2.innerHTML = "Designed and implemented the</br>original Unix operating system"
+
+                    div3_1.appendChild(paraDiv1_2) 
+                    var paraDiv3 = document.createElement('p');
+                        paraDiv3.setAttribute('class', 'paraDiv3');
+                        paraDiv3.innerHTML = "Dennis Ritchie"
+
+                        div3_3.appendChild(paraDiv3)
+                        var paraDiv1_3 = document.createElement('p');
+                        paraDiv1_3.setAttribute('class', 'paraDiv1_3');
+                        paraDiv1_3.innerHTML = "The creator of c programming language"
+
+                        div3_3.appendChild(paraDiv1_3)
+                        let show=false;
+                        function appearPage(){
+                           show=!show;
+                           let division=document.getElementById("head");
+                           if(show==true){
+                               division.style.display="block";
+                           }else{
+                               division.style.display="none";
+                           }
+                        }
 </script>

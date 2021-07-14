@@ -9,15 +9,15 @@
 </head>
 
 <body >
-    <input type="number"/>
+    <div id="min" ></div>
     <p>Min</p>
-    <input type="number"/>
+    <div id="max"></div>
     <p>Max</p>
 </br>
-    <input  id="butt" type="number" placeholder="#"/>
+    <input  id="butt1" type="Number" placeholder="#"/>
     </br>
-    <button onclick="addNumber1(1)" id="butt">1</button>
-    <button onclick="addNumber1(2)">2</button>
+    <button onclick="addNumber1(1)" id="butt" value="1">1</button>
+    <button onclick="addNumber1(2)" id="butt" value="2">2</button>
     <button onclick="addNumber1(3)">3</button>
     </br>
     <button onclick="addNumber1(4)">4</button>
@@ -29,18 +29,12 @@
     <button onclick="addNumber1(9)">9</button>
     </br>
     <button onclick="addNumber1(0)">0</button>
+    <button onclick="compare()">Enter</button>
 </body>
 
 </html>
 <script>
-function addNumber1(num){
-    var arr=[];
-  var op =  document.getElementById("butt").value;
-  alert(op)
-    
-}
-    console.log(arr);
-function showNumber(){
-    console.log('1');
-}
+   
+
+
 </script>
