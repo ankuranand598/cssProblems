@@ -3,9 +3,9 @@
 
 <body>
     <h1 id="heading">My color should change when I double click the button!</h1>
-    <button id="button1">Click here to change my color</button>
+    <button id="button1" ondblclick="changeColor()">Click here to change my color</button>
     <script>
-var butt=document.getElementById("button1");
+
     function random(number) {
         return Math.floor(Math.random() * number);
     }
@@ -16,14 +16,10 @@ var butt=document.getElementById("button1");
         var colorVal=randomColor();
 document.getElementById("heading").style.color=colorVal;
 }
-
-var count=0;
-for(var i=0;i<3;i++){
-
-     butt[i].addEventListener('click', headerColor);
-     count++;
+function changeColor(){
+   var butt = document.getElementById("button1");
+   butt.addEventListener('dblclick',headerColor) 
 }
-   
     
     </script>
 </body>

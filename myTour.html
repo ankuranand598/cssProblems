@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                height: 300px;
+                width: 300px;
+            }
+            #data{
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 20% 20% 20% 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Tour Manager</h1>
+        <form id="myForm">
+            <input type="text" id="name"placeholder="name"/>
+            <input type="number" id="rating" placeholder="Rating"/>
+            <input type="text" id="img" placeholder="upload image"/>
+        </form>
+        <button onclick="storeLocation()">Add Location</button>
+        <button onclick="showVisited()">show</button>
+        <div id="data"></div>
+    </body>
+</html>
+<script src="F:\allrepo\cssRepo\main.js"></script>
