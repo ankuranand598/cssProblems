@@ -14,7 +14,7 @@
     <div id="max"></div>
     <p>Max</p>
 </br>
-    <input  id="butt1" type="Number" placeholder="#"/>
+    <div  id="butt1"></div>
     </br>
     <button onclick="addNumber1(1)" id="butt" value="1">1</button>
     <button onclick="addNumber1(2)" id="butt" value="2">2</button>
@@ -28,13 +28,32 @@
     <button onclick="addNumber1(8)">8</button>
     <button onclick="addNumber1(9)">9</button>
     </br>
-    <button onclick="addNumber1(0)">0</button>
-    <button onclick="compare()">Enter</button>
+    <button   onclick="addNumber1(0)">0</button>
+</br>
+    <button type="submit" id="compare"">Enter</button>
 </body>
 
 </html>
 <script>
+      var ip = document.getElementById('butt1');
+         var empty = '';
+    function addNumber1(num){
+     
+       
+        empty+=num;
+         ip.textContent = empty;
+       if(empty.length<=4){
+           console.log('ok')
+       }else{
+           console.log('overflow')
+           break;
+       }
+    }
+    
    
-
+    function compare(n) {
+            var v =n 
+            console.log(v)
+        }
 
 </script>
