@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <title>Vaccine Booth Alert System</title>
+    <head>
+        <style>
+h1{
+    background-color: rgb(212, 233, 19);
+    font-family: sans-serif;
+    text-align: center;
+}
+button{
+    background-color: rgb(33, 25, 25);
+    color: white;
+    height: 20px;
+    border-radius: 10px;
+    
+}
+input{
+    border: 1px dotted pink;
+}
+        </style>
+    </head>
+    <body>
+        <h1>Vaccine Booth Alert System</h1>
+        <input type="text" id="name"/>
+        <button onclick="register()">Registere Here</button>
+    </body>
+</html>
+<script >
+let queue=['salman','dhoni','elon','messi','neymar'];
+function register(){
+    const name=document.getElementById('name').value;
+    queue.push(name);
+    let messege=`${name}! your registration is done, wait for your turn.`
+alert(messege);
+let promise= new Promise(function(resolve,reject){ //check the spelling of promise.
+
+    setInterval(function(){
+      if (queue[0] === name) {
+            resolve(`${name}, go take a jab now`);
+        }
+    },1000);
+   
+
+});
+
+promise.then(function(res){
+    alert(res);
+});
+}
+
+function startVaccine(){
+    queue.shift();
+     if(queue.length===0){
+         clearInterval(interval)
+     }
+}
+var interval=setInterval(startVaccine,2000);
+
+</script>

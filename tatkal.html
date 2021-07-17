@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Tatkal Alert System</title>
+
+<head>
+    <style>
+     
+    </style>
+</head>
+
+<body>
+    <h1>Tatkal Alert System</h1>
+    <input type="text" id="name" />
+    <button onclick="checkAvailablity()">Notify me</button>
+</body>
+
+</html>
+<script>
+   let MtoG=['salman','sourav','lebron','chettri','rahul gandu','babu bhaiya','jethalal'];
+   let BtoG= ['salman', 'sourav', 'lebron', 'chettri', 'rahul gandu', 'babu bhaiya', 'jethalal'];
+    let PtoG= ['salman', 'sourav', 'lebron', 'chettri', 'rahul gandu', 'babu bhaiya', 'jethalal'];
+   async function checkAvailablity(){
+    let promise= new Promise(function(resolve,reject){
+        setInterval(function(){
+            if (MtoG.length < 5) {
+                resolve('train 1 is available')
+            } else if (BtoG.length < 5) {
+                resolve('train 2 is available')
+            } else if (PtoG.length < 5) {
+                resolve('train 3 is available')
+            }
+        },1000); 
+    });
+    let response=await promise;
+    alert(response);
+    }
+function cancelTicket(){
+    let cancelSpeed1=  Math.ceil(Math.random() * 5);
+    let cancelSpeed2 = Math.ceil(Math.random() * 5);
+    let cancelSpeed3 = Math.ceil(Math.random() * 5)
+setTimeout(function (){
+    MtoG.pop();
+},cancelSpeed1*1000);
+    setTimeout(function () {
+        BtoG.pop();
+    }, cancelSpeed2 * 1000);
+    setTimeout(function () {
+        PtoG.pop();
+    }, cancelSpeed3 * 1000);
+}
+//cancelTicket();
+var interval=setInterval(cancelTicket,1000);
+
+</script>

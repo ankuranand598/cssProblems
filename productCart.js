@@ -38,7 +38,7 @@ function appendCheckout(sum,count) {
         window.location.href="checkOut.html"
     } )
     if (inputBox.innerText == 'masai30') {
-        console.log('ip')
+        //console.log('ip')
     }
     checkOut.append(inputBox,txtbtn,btn)
     //console.log('ip')

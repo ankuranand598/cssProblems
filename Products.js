@@ -23,6 +23,7 @@ function storeProduct() {
 function appendProducts(el){
    
     var div = document.createElement('div');
+    div.setAttribute('class','.productDiv')
     let p_name = document.createElement('p');
     p_name.innerHTML=el.name
     let p_price = document.createElement('p');
