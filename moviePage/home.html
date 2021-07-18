@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<title>ImDb</title>
+
+<head>
+    <style>
+        
+
+        #div_1 {
+            float: left;
+            width: 80%;
+            
+        }
+
+        
+
+        #div_2 {
+            float: left;
+            width: 15%;
+           
+            border-radius: 5%;
+        }
+
+        #search {
+            display: block;
+            font-family: sans-serif;
+            font-size: large;
+           background-color: #13222f;
+            background-image: linear-gradient(62deg, #13222f 0%, #d9ade0 100%);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .button1 {
+            background-color: yellow;
+            height: 30px;
+            border-radius: 15px;
+            margin-left: 35%;
+            font-weight: 700;
+
+        }
+
+        input {
+            width: 25%;
+        }
+
+        .slideImg{
+            width: 98%;
+            height: 300px;
+            object-fit: cover;
+            padding: 10px;
+        }
+
+        
+
+        body{
+                background-color: #336f94;
+                background-image: linear-gradient(135deg, #336f94 0%, #373d94 50%, #060101 100%);
+
+            }
+           .movieDiv > img{
+                width: 100%;
+                height: 250px;
+            }
+          #div_12{
+              display: grid;
+              grid-gap: 5%;
+              
+              grid-template-columns: repeat(3,30%);
+          }
+          #watchList{
+              text-align: right;
+          }
+          .movieDiv{
+               background-color: #FFFFFF;
+               background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #2cc8be 100%);
+                border-radius: 10px;
+          }
+         div > p{
+                font-size: large;
+                font-family: calibri;
+                font-weight: 700;
+                text-align: center;
+          }
+          div > button{
+              margin-left: 38%;
+              height: 20px;
+              border-radius: 5px;
+              background-color: grey;
+              margin-bottom: 5%;
+              color: honeydew;
+              
+          }
+    </style>
+</head>
+<html>
+
+<body>
+    <div id="search">
+        <button class="button1">iMDb</button>
+        menu
+        <input type="search" placeholder="search iMDb" />
+    </div>
+    <div>
+        <div id="div_1">
+            <div id="div_11"></div>
+            <div id="div_12"></div>
+        </div>
+
+        <div id="div_2">
+            <nav class="links">
+                <ul>
+                    <li><a href='home.html'>Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signUp.html">Signup</a></li>
+                </ul>
+            </nav>
+            <p>Sort</p>
+            <button id="high" onclick="arrangeAscend()">High to low</button>
+            <button id="low" onclick="arrangeDescend()">Low to high</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="home.js"></script>

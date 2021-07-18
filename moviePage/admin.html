@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+    <title>Admin</title>
+    <head>
+        <style>
+            body{
+                background-color: rgb(27, 21, 21);
+            }
+            img{
+                width: 100%;
+                height: 250px;
+            }
+          #movieDetails{
+              display: grid;
+              grid-gap: 5%;
+              
+              grid-template-columns: repeat(3,30%);
+          }
+          #watchList{
+              text-align: right;
+          }
+          .movieDiv{
+               background-color: #FFFFFF;
+               background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #2cc8be 100%);
+                border-radius: 10px;
+          }
+         div > p{
+                font-size: large;
+                font-family: calibri;
+                font-weight: 700;
+                text-align: center;
+          }
+          div > button{
+              margin-left: 38%;
+              height: 20px;
+              border-radius: 5px;
+              background-color: grey;
+              margin-bottom: 5%;
+              color: honeydew;
+              
+          }
+        </style>
+    </head>
+    <body>
+
+        <p id="watchList">
+            <button id="watchLists()">Watch lists</button>
+        </p>
+        <input type="text" id="movie"/>
+        <input type="number" id="rating"/>
+        <input type="text" id="poster"/>
+        <button onclick="addToHome()">Add</button>
+  
+        <div id="movieDetails"></div>
+    </body>
+</html>
+<script src="admin.js"></script>
